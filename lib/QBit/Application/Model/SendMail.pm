@@ -30,11 +30,12 @@ our %MESSAGE_STRUCT = (
     source_spot => {type => 'str', conv_raw => 1},
 );
 
-our %TEMPATERS = (
+our %TEMPLATE_OPTIONS = ();
+our %TEMPATERS        = (
     TT2 => sub {
         my $d = shift;
         use Template;
-        my $template = Template->new({});
+        my $template = Template->new(\%TEMPLATE_OPTIONS);
         my $out      = '';
         $template->process($d->{template}, $d->{vars}, \$out)
           || throw Exception::SendMail gettext('Template process error [%s]', $template->error());
