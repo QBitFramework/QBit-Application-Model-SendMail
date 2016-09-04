@@ -336,3 +336,33 @@ sub _before_send { }
 sub _after_send  { }
 
 TRUE;
+
+__END__
+
+=encoding utf8
+
+=head1 Name
+
+QBit::Application::Model::SendMail - Class to send E-Mail.
+
+=head1 GitHub
+
+https://github.com/QBitFramework/QBit-Application-Model-SendMail
+
+=head1 Install
+
+=over
+
+=item *
+
+cpanm QBit::Application::Model::SendMail
+
+=item *
+
+apt-get install libqbit-application-model-sendmail-perl (http://perlhub.ru/)
+
+=back
+
+For more information. please, see code.
+
+=cut
